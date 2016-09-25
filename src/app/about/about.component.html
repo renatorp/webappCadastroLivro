@@ -1,0 +1,41 @@
+<div>
+    <h3>Cadastro de Livro</h3>
+    <div class="resource">
+       <div class="row">
+    <form class="col s12" *ngIf="selectedLivro">
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="nome" name="nome" type="text" class="validate" [(ngModel)]="selectedLivro.nome" [class.valid]="selectedLivro.nome">
+          <label for="nome" [class.active]="selectedLivro.nome">Nome</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="ano" name="ano" type="text" class="validate" [(ngModel)]="selectedLivro.ano" [class.valid]="selectedLivro.ano">
+          <label for="ano" [class.active]="selectedLivro.ano">Ano</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6">
+          <input id="isbn" name="isbn" type="text" class="validate" [(ngModel)]="selectedLivro.isbn" [class.valid]="selectedLivro.isbn">
+          <label for="isbn" [class.active]="selectedLivro.isbn">ISBN</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="editora" name="editora" type="text" class="validate" [(ngModel)]="selectedLivro.editora" [class.valid]="selectedLivro.editora">
+          <label [class.active]="selectedLivro.editora" for="editora">Editora</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <input id="autores" name="autores" type="text" class="validate" [(ngModel)]="selectedLivro.autores" [class.valid]="selectedLivro.autores">
+          <label for="autores" [class.active]="selectedLivro.autores">Autores</label>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s12">
+          <textarea id="criticas" name="criticas" class="materialize-textarea" [(ngModel)]="selectedLivro.criticas" [class.valid]="selectedLivro.criticas"></textarea>
+          <label for="criticas" [class.active]="selectedLivro.criticas">Textarea</label>
+        </div>
+      </div>
+    </form>
+  </div>
+    </div>
+</div>
